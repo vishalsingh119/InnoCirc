@@ -1,0 +1,108 @@
+
+@font-face {
+  font-family:'verdana';
+  src: url('../src/assets/fonts/verdana.ttf') format('ttf');
+  font-style: normal;font-weight: normal;
+}
+
+@font-face {
+  font-family:'VerdanaBold';
+  src: url('../src/assets/fonts/VerdanaBold.ttf') format('ttf');
+  font-style: normal;font-weight: bold;
+} 
+
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #343a40;
+  font-family: 'verdana', sans-serif;
+}
+
+//header
+.navbar{
+  background: #4269ea;
+  .logo{
+    i{
+      font-size: 2rem;
+      color: gold;
+    }
+  }
+  .input-wrapper{
+    input{
+      outline: 0;
+      height: 42px;
+      width: 244px;
+      line-height: 42px;
+      padding: 0 16px;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #212121;
+      border: 0;
+      float: left;
+      border-radius: 4px;
+    }
+  }
+}
+.card-item{
+  display: flex;
+  flex: calc( 100% / 5 - 1rem);
+  flex-wrap: wrap;
+  margin: 0 0.5rem 0.5rem 0;
+  max-width: calc( 100% / 5 - 1rem);
+  
+  //card 
+  .card{
+    .card-body{
+      .product-image{
+        img{
+          max-height: 200px;
+        width: 100%;
+        object-fit: contain;
+        }
+        
+      }
+      .product-details{
+        color: #000000;
+        .product-title{
+          font-size: 0.8rem;
+        }
+        .product-value{
+          justify-content: space-between;
+          font-size: 0.9rem;
+          .product-price{
+            position: relative;
+            span{
+              position: relative;
+              color:#a6aaae;
+              &:before{
+                content: '';
+                height: 1px;
+                width: 100%;
+                background: #a6aaae;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: rotateZ(5deg);
+              }
+            }
+          }
+          .product-discount{
+            color: #99b282;
+          }
+        }
+      }
+      .btn-grp{
+        .addBtn{
+          background: #f2ad36;
+          color: #000000;
+          border-radius: 1rem;
+          float:right;
+        }
+      }
+    }
+  }
+
+}
